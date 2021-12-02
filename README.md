@@ -171,7 +171,7 @@ Since the dataset is large and contains 11,026 columns, I first tried to perform
 
 Remark: If the model is evaluated on the original dataset (rather than the enlarged dataset), only one sound file is classified incorrectly. The accuracy is 99.9%. (For details, please refer to evaluate.ipynb)  
 
-The trained model above was stored as a TFLite model "model2.tflite" and the standardised model was stored as "scanner.pkl". A script was also written to support the classification of music by providing a .wav file, a song name (the song would then be downloaded in YouTube and converted to a .wav file) or a YouTube URL. To evaluate the performance of the model, the following songs that never appeared in the dataset were fed into the model:
+The trained model above was stored as a TFLite model "model2.tflite" and the standardization model was stored as "scaler.pkl". A script was also written to support the classification of music by providing a .wav file, a song name (the song would then be downloaded in YouTube and converted to a .wav file) or a YouTube URL. To evaluate the performance of the model, the following songs that never appeared in the dataset were fed into the model:
 
 | Song Name | Predicted Genre |
 | --- | --- |
