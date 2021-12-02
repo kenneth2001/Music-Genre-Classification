@@ -183,6 +183,8 @@ The trained model above was stored as a TFLite model "model2.tflite" and the sta
 
 I have tried several songs and many of them are classified correctly. Hence, through having a larger dataset, the accuracy can be increased significantly, and the data extracted by performing FFT is then proved to be valuable in music genre classification.
 
+Simple Demo: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1JhUhI1wIMnwEpVZVyN4gcXI04dtzjG9i?usp=sharing)
+
 ## Limitations
 
 With the limitations of the hardware I have, a more complex model cannot be built as there is not enough memory and the computation time is too long. Because of the time constraints, only the GTZAN dataset was used to train my model. Therefore, if a song given to the model is not in English, the performance may decay a lot. In addition, only ten types of music are available to my model, which is not general enough. Last but not least, due to the lack of knowledge in Tensorflow, the definition of the model could have been written more elegantly.
