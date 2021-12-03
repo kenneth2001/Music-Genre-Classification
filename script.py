@@ -28,12 +28,12 @@ def download_youtube_audio(link, output_dir):
         'preferredcodec': 'wav'
     }]
    }
-    current_list_of_files = os.listdir(output_dir)
+    # current_list_of_files = os.listdir(output_dir)
     
     print('Downloading...')
     with youtube_dl.YoutubeDL(ytdl_format_options) as ydl:
         info = ydl.extract_info(link, download=True)
-        filename = ydl.prepare_filename(info)
+        # filename = ydl.prepare_filename(info)
     
     if 'entries' in info:
         info = info['entries'][0]
@@ -41,8 +41,10 @@ def download_youtube_audio(link, output_dir):
     title = info['title']
     print(f'Downloaded: {title}')
     
-    filename = list(set(os.listdir(output_dir))-set(current_list_of_files))[0]
-    return f'{output_dir}/{filename}'
+    # filename = list(set(os.listdir(output_dir))-set(current_list_of_files))[0]
+    filename = ydl.prepare_filename(info).replace('webm', 'wav').replace('m4a', 'wav').replace('mp3', 'wav')
+    #return f'{output_dir}/{filename}'
+    return filename
 
 # loading amplitude of frequency 0Hz - 11025Hz    
 def load_fft_amplitude(path):
